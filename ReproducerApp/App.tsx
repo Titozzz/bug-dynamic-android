@@ -5,6 +5,7 @@
  * @format
  */
 
+import { Mixpanel } from 'mixpanel-react-native';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -28,6 +29,8 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
+console.log('Mixpanel', Mixpanel);
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
